@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KEA Restaurent - Contact</title>
+  </head>
+  <body>
+    <header>
+      <h1>Restaurant KEA</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="menu.html">Menu</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <address>
+          Guldbergsgade 29 2200 Copenhagen
+          <a href="tel:+4520825370">20 82 53 70</a>
+          <a href="mailto:info@restaurentkea.dk">info&commat;restaurentkea.dk</a>
+        </address>
+
+        <figure>
+          <img src="img/map.jpg" alt="Map of Restaurant KEA´s location" />
+        </figure>
+      </section>
+
+      <section>
+        <form action="mailto:info@restaurantkea.dk" name="Contact form" method="post">
+          <fieldset>
+            <legend>Contact form</legend>
+            <label for="full-name">
+              <span>Full name</span>
+              <input type="text" name="full-name" id="full-name" pattern="^(\w\w+)\s(\w+)$" required />
+            </label>
+            <label for="phone-number">
+              <abbr title="Phone number">Phone no.</abbr>
+              <input type="tel" name="phone-number" id="phone-number" maxlength="8" pattern="[0-9]{8}" required />
+            </label>
+            <label for="email">
+              <span>E-mail</span>
+              <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+            </label>
+            <label for="participants-quantity">
+              <span>Persons</span>
+              <input
+                type="number"
+                name="participants-quantity"
+                id="participants-quantity"
+                min="1"
+                max="20"
+                value="2"
+                autocomplete="off"
+                required
+              />
+            </label>
+            <label for="date-and-time">
+              <span>Date and time</span>
+              <input type="datetime-local" name="date-and-time" id="date-and-time" required />
+            </label>
+            <button type="submit">Send</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; 2022 KEA Development</small>
+    </footer>
+  </body>
+</html>
