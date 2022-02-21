@@ -38,27 +38,59 @@
       </section>
 
       <section>
+        <h2>Contact form</h2>
         <form action="mailto:info@restaurantkea.dk" name="Contact form" method="post">
           <fieldset>
-            <legend>Contact form</legend>
+            <legend>Contact details</legend>
             <label for="full-name">
               <span>Full name</span>
-              <input type="text" name="full-name" id="full-name" pattern="^(\w\w+)\s(\w+)$" required />
+              <abbr title="Required">*</abbr>
+              <input
+                type="text"
+                name="full-name"
+                id="full-name"
+                placeholder="Please enter your full name"
+                pattern="^(\w\w+)\s(\w+)$"
+                required
+              />
             </label>
             <label for="phone-number">
               <abbr title="Phone number">Phone no.</abbr>
-              <input type="tel" name="phone-number" id="phone-number" maxlength="8" pattern="[0-9]{8}" required />
+              <abbr title="Required">*</abbr>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                placeholder="Please enter your phone number"
+                maxlength="8"
+                pattern="[0-9]{8}"
+                required
+              />
             </label>
             <label for="email">
               <span>E-mail</span>
-              <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+              <abbr title="Required">*</abbr>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Please enter your e-mail"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                required
+              />
             </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Reservation details</legend>
             <label for="participants-quantity">
               <span>Persons</span>
+              <abbr title="Required">*</abbr>
               <input
                 type="number"
                 name="participants-quantity"
                 id="participants-quantity"
+                placeholder="Please enter the amount of persons"
                 min="1"
                 max="20"
                 value="2"
@@ -68,10 +100,18 @@
             </label>
             <label for="date-and-time">
               <span>Date and time</span>
+              <abbr title="Required">*</abbr>
               <input type="datetime-local" name="date-and-time" id="date-and-time" required />
             </label>
-            <button type="submit">Send</button>
+            <label for="comment">
+              <span>Further information</span>
+              <textarea name="comment" id="comment" cols="40" rows="3">
+Any comments?
+              </textarea>
+            </label>
           </fieldset>
+
+          <button type="submit">Send</button>
         </form>
       </section>
     </main>
